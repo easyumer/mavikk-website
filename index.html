@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mavikk | Digital Excellence That Drives Results</title>
+    <meta name="description" content="Mavikk is a premium digital marketing agency specializing in website design, branding, and digital marketing strategies that deliver measurable results.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico">
+    
+    <!-- Font imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS imports -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components/buttons.css">
+    <link rel="stylesheet" href="assets/css/components/cards.css">
+    <link rel="stylesheet" href="assets/css/components/testimonials.css">
+    <link rel="stylesheet" href="assets/css/components/forms.css">
+    <link rel="stylesheet" href="assets/css/sections/header.css">
+    <link rel="stylesheet" href="assets/css/sections/hero.css">
+    <link rel="stylesheet" href="assets/css/sections/pain-points.css">
+    <link rel="stylesheet" href="assets/css/sections/services.css">
+    <link rel="stylesheet" href="assets/css/sections/case-studies.css">
+    <link rel="stylesheet" href="assets/css/sections/contact.css">
+    <link rel="stylesheet" href="assets/css/sections/footer.css">
+</head>
+<body>
+    <!-- Background Canvas (PixiJS) -->
+    <div id="background" class="background"></div>
+    
+    <!-- Header & Navigation -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="#" class="logo">
+                    <span class="logo__text">Mavikk</span>
+                </a>
+                <nav class="nav">
+                    <button class="nav__toggle" aria-label="Toggle navigation menu">
+                        <span class="nav__toggle-bar"></span>
+                        <span class="nav__toggle-bar"></span>
+                    </button>
+                    <ul class="nav__menu">
+                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#case-studies" class="nav__link">Case Studies</a></li>
+                        <li class="nav__item"><a href="#process" class="nav__link">Process</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">Get Started</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="headline headline--split">
+                    Digital <em>Excellence</em><br>
+                    That Drives <span class="text-gradient">Results</span>
+                </h1>
+                <p class="lead-text">
+                    We craft digital experiences that transform businesses, driving measurable growth and establishing market leadership.
+                </p>
+                <div class="hero__cta">
+                    <a href="#contact" class="btn btn--primary">Book a Strategy Call</a>
+                    <span class="hero__cta-note">No-obligation 30-minute consultation</span>
+                </div>
+            </div>
+            <div class="hero__social-proof">
+                <p class="hero__social-proof-text">Trusted by industry leaders</p>
+                <div class="hero__client-logos">
+                    <!-- Client logos will be added here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pain Points Section -->
+    <section id="pain-points" class="section pain-points">
+        <div class="container">
+            <h2 class="section-title reveal-text">Common Challenges</h2>
+            <div class="pain-points__grid">
+                <!-- Pain points will be populated here -->
+            </div>
+            <div class="pain-points__cta">
+                <a href="#services" class="btn btn--secondary">See How We Solve This</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Core Services Overview -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title reveal-text">Our Core Services</h2>
+            <div class="services__grid">
+                <!-- Service cards will be populated here -->
+            </div>
+            <div class="services__cta">
+                <a href="#process" class="btn btn--secondary">Explore Our Approach</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Case Studies Showcase -->
+    <section id="case-studies" class="section case-studies">
+        <div class="container">
+            <h2 class="section-title reveal-text">Client Success Stories</h2>
+            <div class="case-studies__grid">
+                <!-- Case study cards will be populated here -->
+            </div>
+            <div class="case-studies__cta">
+                <a href="#contact" class="btn btn--primary">Get Similar Results</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact/Consultation Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact__wrapper">
+                <div class="contact__content">
+                    <h2 class="section-title reveal-text">Start Your Project</h2>
+                    <p class="lead-text">
+                        Ready to transform your digital presence? Let's discuss how we can help you achieve your business goals.
+                    </p>
+                    <div class="contact__info">
+                        <div class="contact__info-item">
+                            <span class="contact__info-label">Email</span>
+                            <a href="mailto:hello@mavikk.com" class="contact__info-value">hello@mavikk.com</a>
+                        </div>
+                        <div class="contact__info-item">
+                            <span class="contact__info-label">Phone</span>
+                            <a href="tel:+12345678901" class="contact__info-value">+1 (234) 567-8901</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__form-container">
+                    <form class="contact__form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company</label>
+                            <input type="text" id="company" name="company" class="form-input">
+                        </div>
+                        <div class="form-group form-group--full">
+                            <label for="message" class="form-label">How can we help?</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" required></textarea>
+                        </div>
+                        <div class="form-group form-group--full">
+                            <button type="submit" class="btn btn--primary btn--full">Book a Strategy Call</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__branding">
+                    <span class="logo__text logo__text--footer">Mavikk</span>
+                    <p class="footer__tagline">Digital Excellence That Drives Results</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__links-column">
+                        <h3 class="footer__links-title">Services</h3>
+                        <ul class="footer__links-list">
+                            <li><a href="#" class="footer__link">Website Design</a></li>
+                            <li><a href="#" class="footer__link">Branding</a></li>
+                            <li><a href="#" class="footer__link">Digital Marketing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__links-column">
+                        <h3 class="footer__links-title">Company</h3>
+                        <ul class="footer__links-list">
+                            <li><a href="#about" class="footer__link">About</a></li>
+                            <li><a href="#process" class="footer__link">Process</a></li>
+                            <li><a href="#contact" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__links-column">
+                        <h3 class="footer__links-title">Legal</h3>
+                        <ul class="footer__links-list">
+                            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                            <li><a href="#" class="footer__link">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 Mavikk Digital Agency. All rights reserved.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Twitter">Twitter</a>
+                    <a href="#" class="footer__social-link" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript imports -->
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.3.2/dist/pixi.min.js" 
+            integrity="sha384-1tSXQIPD/ROwh6TKTfDrUJPFZxUCB4J0xBdYWBZ6IEr9FkmfqDTA47hcYYvvI4IW" 
+            crossorigin="anonymous"></script>
+    <script src="assets/js/horizon.js" type="module"></script>
+    <script src="assets/js/main.js" type="module"></script>
+</body>
+</html>
