@@ -1,0 +1,302 @@
+/* 
+ * FILE: assets/css/components/forms.css
+ * VERSION: v0.01.0
+ * DESCRIPTION: Form component styles for the Mavikk website
+ */
+
+/* Form container */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+  }
+  
+  /* Form groups */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    width: 100%;
+  }
+  
+  .form-group--full {
+    grid-column: 1 / -1;
+  }
+  
+  .form-group--row {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3);
+  }
+  
+  /* Form grid for multi-column layouts */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    width: 100%;
+  }
+  
+  @media (min-width: 640px) {
+    .form-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Form labels */
+  .form-label {
+    color: var(--color-white);
+    font-size: var(--fs-sm);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-1);
+  }
+  
+  .form-label--required::after {
+    content: "*";
+    color: var(--color-accent);
+    margin-left: var(--space-1);
+  }
+  
+  /* Form inputs */
+  .form-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-gray-800);
+    border-radius: var(--border-radius-md);
+    color: var(--color-white);
+    font-size: var(--fs-base);
+    padding: var(--space-3);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    width: 100%;
+  }
+  
+  .form-input:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(138, 92, 247, 0.2);
+  }
+  
+  .form-input::placeholder {
+    color: var(--color-gray-500);
+  }
+  
+  .form-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Form textarea */
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  /* Form select */
+  .form-select-container {
+    position: relative;
+  }
+  
+  .form-select {
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-gray-800);
+    border-radius: var(--border-radius-md);
+    color: var(--color-white);
+    font-size: var(--fs-base);
+    padding: var(--space-3);
+    padding-right: var(--space-6);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .form-select:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(138, 92, 247, 0.2);
+  }
+  
+  .form-select-arrow {
+    position: absolute;
+    right: var(--space-3);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--color-gray-400);
+  }
+  
+  /* Form checkbox and radio */
+  .form-checkbox,
+  .form-radio {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    cursor: pointer;
+  }
+  
+  .form-checkbox__input,
+  .form-radio__input {
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-gray-600);
+    width: 20px;
+    height: 20px;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .form-checkbox__input {
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .form-radio__input {
+    border-radius: 50%;
+  }
+  
+  .form-checkbox__input:checked,
+  .form-radio__input:checked {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+  
+  .form-checkbox__input:checked::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 4px;
+    border-left: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
+    transform: rotate(-45deg);
+  }
+  
+  .form-radio__input:checked::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+  }
+  
+  .form-checkbox__label,
+  .form-radio__label {
+    color: var(--color-white);
+    font-size: var(--fs-sm);
+    user-select: none;
+  }
+  
+  /* Form validation */
+  .form-input--error {
+    border-color: var(--color-error);
+  }
+  
+  .form-input--error:focus {
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+  }
+  
+  .form-error-message {
+    color: var(--color-error);
+    font-size: var(--fs-xs);
+    margin-top: var(--space-1);
+  }
+  
+  .form-success-message {
+    color: var(--color-success);
+    font-size: var(--fs-xs);
+    margin-top: var(--space-1);
+  }
+  
+  /* Form help text */
+  .form-help-text {
+    color: var(--color-gray-400);
+    font-size: var(--fs-xs);
+    margin-top: var(--space-1);
+  }
+  
+  /* Custom contact form styles */
+  .contact__form {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-gray-800);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-6);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  @media (min-width: 640px) {
+    .contact__form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .contact__form .form-group--full {
+    grid-column: 1 / -1;
+  }
+  
+  /* Form with floating labels */
+  .form-floating {
+    position: relative;
+  }
+  
+  .form-floating .form-input {
+    height: 60px;
+    padding-top: 25px;
+    padding-bottom: 8px;
+  }
+  
+  .form-floating .form-textarea {
+    min-height: 140px;
+    padding-top: 35px;
+    padding-bottom: 8px;
+  }
+  
+  .form-floating .form-label {
+    position: absolute;
+    top: 20px;
+    left: var(--space-3);
+    transform-origin: left top;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+    pointer-events: none;
+  }
+  
+  .form-floating .form-input:focus ~ .form-label,
+  .form-floating .form-input:not(:placeholder-shown) ~ .form-label,
+  .form-floating .form-textarea:focus ~ .form-label,
+  .form-floating .form-textarea:not(:placeholder-shown) ~ .form-label {
+    transform: translateY(-12px) scale(0.85);
+    color: var(--color-accent);
+  }
+  
+  /* Form loading state */
+  .form--loading .form-input,
+  .form--loading .btn {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
+  .form-loading-indicator {
+    display: none;
+  }
+  
+  .form--loading .form-loading-indicator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(138, 92, 247, 0.3);
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: spinner 0.6s linear infinite;
+    margin-right: var(--space-2);
+  }
+  
+  @keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,221 @@
+/* 
+ * FILE: assets/css/typography.css
+ * VERSION: v0.01.0
+ * DESCRIPTION: Typography system for the Mavikk website
+ */
+
+ :root {
+    /* Font family */
+    --font-primary: 'Urbanist', sans-serif;
+    
+    /* Font weights */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+    --font-black: 900;
+    
+    /* Font sizes - Mobile first with clamp() for responsive sizing */
+    --fs-xs: clamp(0.75rem, 2vw, 0.875rem);       /* 12-14px */
+    --fs-sm: clamp(0.875rem, 2vw, 1rem);          /* 14-16px */
+    --fs-base: clamp(1rem, 2.5vw, 1.125rem);      /* 16-18px */
+    --fs-lg: clamp(1.125rem, 3vw, 1.25rem);       /* 18-20px */
+    --fs-xl: clamp(1.25rem, 3.5vw, 1.5rem);       /* 20-24px */
+    --fs-2xl: clamp(1.5rem, 4vw, 1.875rem);       /* 24-30px */
+    --fs-3xl: clamp(1.875rem, 5vw, 2.25rem);      /* 30-36px */
+    --fs-4xl: clamp(2.25rem, 6vw, 3rem);          /* 36-48px */
+    --fs-5xl: clamp(3rem, 8vw, 4rem);             /* 48-64px */
+    --fs-6xl: clamp(4rem, 10vw, 5rem);            /* 64-80px */
+    
+    /* Line heights */
+    --lh-tight: 1.1;
+    --lh-snug: 1.25;
+    --lh-normal: 1.5;
+    --lh-relaxed: 1.625;
+    --lh-loose: 1.75;
+    
+    /* Letter spacing */
+    --ls-tight: -0.025em;
+    --ls-normal: 0;
+    --ls-wide: 0.025em;
+    --ls-wider: 0.05em;
+    --ls-widest: 0.1em;
+  }
+  
+  /* Typography base styles */
+  body {
+    font-family: var(--font-primary);
+    font-size: var(--fs-base);
+    font-weight: var(--font-regular);
+    line-height: var(--lh-normal);
+    color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Heading reset to allow custom styling */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: var(--font-black);
+    line-height: var(--lh-tight);
+  }
+  
+  p {
+    margin: 0 0 var(--space-4) 0;
+  }
+  
+  /* Links */
+  a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  
+  a:hover, a:focus {
+    color: var(--color-accent);
+  }
+  
+  /* Headline system with mixed weights */
+  .headline {
+    font-size: var(--fs-4xl);
+    font-weight: var(--font-black);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-tight);
+    margin-bottom: var(--space-6);
+  }
+  
+  @media (min-width: 768px) {
+    .headline {
+      font-size: var(--fs-5xl);
+    }
+  }
+  
+  /* Split weight headlines */
+  .headline--split {
+    display: inline-block;
+  }
+  
+  .headline--split em {
+    font-style: normal;
+    font-weight: var(--font-light);
+    color: var(--color-accent);
+  }
+  
+  /* Gradient text effect */
+  .text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  /* Extended letter spacing for section titles */
+  .section-title {
+    font-size: var(--fs-lg);
+    font-weight: var(--font-medium);
+    letter-spacing: var(--ls-widest);
+    text-transform: uppercase;
+    margin-bottom: var(--space-6);
+    color: var(--color-accent);
+  }
+  
+  /* Creative paragraph styling */
+  .lead-text {
+    font-size: var(--fs-xl);
+    font-weight: var(--font-light);
+    line-height: var(--lh-relaxed);
+    max-width: 65ch;
+    margin-bottom: var(--space-6);
+  }
+  
+  /* Accent text */
+  .accent-text {
+    color: var(--color-accent);
+    font-weight: var(--font-medium);
+  }
+  
+  /* Animated text reveal */
+  .reveal-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .reveal-text.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Small text for captions, footnotes, etc. */
+  .text-small {
+    font-size: var(--fs-xs);
+    line-height: var(--lh-normal);
+  }
+  
+  /* Medium text for body content */
+  .text-medium {
+    font-size: var(--fs-sm);
+    line-height: var(--lh-normal);
+  }
+  
+  /* Large text for emphasis */
+  .text-large {
+    font-size: var(--fs-lg);
+    line-height: var(--lh-snug);
+  }
+  
+  /* Text alignment utilities */
+  .text-left {
+    text-align: left;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  /* Font weight utilities */
+  .font-light {
+    font-weight: var(--font-light);
+  }
+  
+  .font-regular {
+    font-weight: var(--font-regular);
+  }
+  
+  .font-medium {
+    font-weight: var(--font-medium);
+  }
+  
+  .font-bold {
+    font-weight: var(--font-bold);
+  }
+  
+  .font-black {
+    font-weight: var(--font-black);
+  }
+  
+  /* Text transform utilities */
+  .uppercase {
+    text-transform: uppercase;
+  }
+  
+  .lowercase {
+    text-transform: lowercase;
+  }
+  
+  .capitalize {
+    text-transform: capitalize;
+  }
+  
+  /* Text truncation */
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
