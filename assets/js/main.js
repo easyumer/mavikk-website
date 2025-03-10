@@ -7,6 +7,7 @@
 // Import modules
 import DigitalHorizon from './horizon.js';
 import TestimonialsCarousel from './components/testimonials.js';
+import BeforeAfterSlider from './components/before-after-slider.js';
 
 /**
  * MavikkWebsite class - Manages all website functionality
@@ -41,6 +42,9 @@ class MavikkWebsite {
     this.initServiceToggle();
     this.initFormValidation();
     this.initSmoothScroll();
+    this.initButtonEffects();
+    this.initTestimonials();
+    this.initBeforeAfterSliders();
     
     // Add scroll progress indicator
     this.addScrollProgress();
@@ -189,7 +193,31 @@ class MavikkWebsite {
     // Update progress bar width
     this.progressBar.style.width = `${progress}%`;
   }
-  
+  initBeforeAfterSliders() {
+    // Find all slider containers
+    const sliderContainers = document.querySelectorAll('.before-after-slider');
+    
+    if (sliderContainers.length) {
+      // Initialize each slider
+      sliderContainers.forEach((container, index) => {
+        // Get custom options if available via data attributes
+        const initialPosition = parseFloat(container.dataset.position) || 50;
+        const orientation = container.dataset.orientation || 'horizontal';
+        const beforeLabel = container.dataset.beforeLabel || 'Before';
+        const afterLabel = container.dataset.afterLabel || 'After';
+        
+        // Create slider instance
+        new BeforeAfterSlider(container, {
+          initialPosition,
+          orientation,
+          beforeLabel,
+          afterLabel
+        });
+      });
+      
+      console.log(`Initialized ${sliderContainers.length} before/after sliders`);
+    }
+  }
   /**
    * Initialize service card toggle functionality
    */
@@ -214,6 +242,22 @@ class MavikkWebsite {
         }
       });
     });
+  }
+  
+  /**
+   * Initialize testimonials carousel
+   */
+  initTestimonials() {
+    // Initialize testimonials carousel if it exists on the page
+    const testimonialCarousel = document.getElementById('testimonial-carousel');
+    if (testimonialCarousel) {
+      new TestimonialsCarousel('testimonial-carousel', {
+        autoplay: true,
+        autoplayDelay: 6000,
+        loop: true
+      });
+      console.log('Testimonials carousel initialized');
+    }
   }
   
   /**

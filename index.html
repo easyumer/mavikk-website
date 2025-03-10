@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="assets/css/sections/case-studies.css">
     <link rel="stylesheet" href="assets/css/sections/contact.css">
     <link rel="stylesheet" href="assets/css/sections/footer.css">
+    <link rel="stylesheet" href="assets/css/components/before-after-slider.css">
 </head>
 <body>
     <!-- Background Canvas (PixiJS) -->
@@ -110,17 +111,87 @@
     </section>
     
     <!-- Case Studies Showcase -->
-    <section id="case-studies" class="section case-studies">
-        <div class="container">
-            <h2 class="section-title reveal-text">Client Success Stories</h2>
-            <div class="case-studies__grid">
-                <!-- Case study cards will be populated here -->
+    <!-- Case Studies Showcase -->
+<section id="case-studies" class="section case-studies">
+    <div class="container">
+        <h2 class="section-title reveal-text">Client Success Stories</h2>
+        
+        <!-- Featured Case Study with Before/After Slider -->
+        <div class="case-study-featured">
+            <div class="case-study-featured__header">
+                <h3 class="case-study-featured__title">TechCorp Website Redesign</h3>
+                <div class="case-study-featured__meta">
+                    <span class="case-study-featured__category">Website Redesign</span>
+                    <span class="case-study-featured__results">43% Conversion Increase</span>
+                </div>
             </div>
-            <div class="case-studies__cta">
-                <a href="#contact" class="btn btn--primary">Get Similar Results</a>
+            
+            <!-- Metrics Highlight -->
+            <div class="case-study-featured__metrics">
+                <div class="case-study-featured__metric">
+                    <div class="case-study-featured__metric-value">43%</div>
+                    <div class="case-study-featured__metric-label">Conversion Increase</div>
+                </div>
+                <div class="case-study-featured__metric">
+                    <div class="case-study-featured__metric-value">67%</div>
+                    <div class="case-study-featured__metric-label">Time on Site</div>
+                </div>
+                <div class="case-study-featured__metric">
+                    <div class="case-study-featured__metric-value">52%</div>
+                    <div class="case-study-featured__metric-label">More Leads</div>
+                </div>
+            </div>
+            
+            <!-- Before/After Comparison -->
+            <div class="case-study-comparison">
+                <h4 class="case-study-comparison__title">Homepage Transformation</h4>
+                
+                <!-- Before/After Slider Component -->
+                <div class="before-after-slider" data-position="50" data-orientation="horizontal" data-before-label="Before" data-after-label="After">
+                    <div class="before-after-slider__before">
+                        <img src="/api/placeholder/1200/675" alt="TechCorp website before redesign">
+                    </div>
+                    <div class="before-after-slider__after">
+                        <img src="/api/placeholder/1200/675" alt="TechCorp website after redesign">
+                    </div>
+                </div>
+                
+                <div class="case-study-comparison__caption">
+                    Slide to compare the before and after versions of the TechCorp homepage
+                </div>
+            </div>
+            
+            <!-- Brief description -->
+            <p class="case-study-featured__description">
+                TechCorp approached us with an outdated website that failed to generate leads. Our strategy focused on clarifying their value proposition, streamlining the user journey, and optimizing for conversions.
+            </p>
+            
+            <!-- Client testimonial -->
+            <div class="case-study-featured__testimonial">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__quote">
+                        "The website redesign completely transformed our digital presence and delivered measurable business results. Within the first month, we saw a 43% increase in qualified leads."
+                    </div>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__author-info">
+                            <div class="testimonial-card__author-name">Michael K.</div>
+                            <div class="testimonial-card__author-title">CEO, TechCorp Inc.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+        
+        <!-- Other Case Studies -->
+        <div class="case-studies__grid">
+            <!-- Other case study cards will be populated here -->
+        </div>
+        
+        <div class="case-studies__cta">
+            <a href="#contact" class="btn btn--primary">Get Similar Results</a>
+        </div>
+    </div>
+</section>
 
     <!-- Testimonials Section -->
 <section id="testimonials" class="section testimonials">
