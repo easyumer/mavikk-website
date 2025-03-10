@@ -1,421 +1,629 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mavikk | Digital Excellence That Drives Results</title>
-    <meta name="description" content="Mavikk is a premium digital marketing agency specializing in website design, branding, and digital marketing strategies that deliver measurable results.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.ico">
-    
-    <!-- Font imports -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
-    <!-- CSS imports -->
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/typography.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components/buttons.css">
-    <link rel="stylesheet" href="assets/css/components/cards.css">
-    <link rel="stylesheet" href="assets/css/components/testimonials.css">
-    <link rel="stylesheet" href="assets/css/components/forms.css">
-    <link rel="stylesheet" href="assets/css/sections/header.css">
-    <link rel="stylesheet" href="assets/css/sections/hero.css">
-    <link rel="stylesheet" href="assets/css/sections/pain-points.css">
-    <link rel="stylesheet" href="assets/css/sections/services.css">
-    <link rel="stylesheet" href="assets/css/sections/case-studies.css">
-    <link rel="stylesheet" href="assets/css/sections/contact.css">
-    <link rel="stylesheet" href="assets/css/sections/footer.css">
-    <link rel="stylesheet" href="assets/css/components/before-after-slider.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mavikk Digital Marketing Agency | Digital Excellence That Drives Results</title>
+  <meta name="description" content="Mavikk helps businesses achieve measurable growth through strategic website design, branding, and digital marketing services.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 </head>
 <body>
-    <!-- Background Canvas (PixiJS) -->
-    <div id="background" class="background"></div>
-    
-    <!-- Header & Navigation -->
-    <header id="header" class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <a href="#" class="logo">
-                    <span class="logo__text">Mavikk</span>
-                </a>
-                <nav class="nav">
-                    <button class="nav__toggle" aria-label="Toggle navigation menu">
-                        <span class="nav__toggle-bar"></span>
-                        <span class="nav__toggle-bar"></span>
-                    </button>
-                    <ul class="nav__menu">
-                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                        <li class="nav__item"><a href="#case-studies" class="nav__link">Case Studies</a></li>
-                        <li class="nav__item"><a href="#process" class="nav__link">Process</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">Get Started</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero__content">
-                <h1 class="headline headline--split">
-                    Digital <em>Excellence</em><br>
-                    That Drives <span class="text-gradient">Results</span>
-                </h1>
-                <p class="lead-text">
-                    We craft digital experiences that transform businesses, driving measurable growth and establishing market leadership.
-                </p>
-                <div class="hero__cta">
-                    <a href="#contact" class="btn btn--primary">Book a Strategy Call</a>
-                    <span class="hero__cta-note">No-obligation 30-minute consultation</span>
-                </div>
-            </div>
-            <div class="hero__social-proof">
-                <p class="hero__social-proof-text">Trusted by industry leaders</p>
-                <div class="hero__client-logos">
-                    <!-- Client logos will be added here -->
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Pain Points Section -->
-    <section id="pain-points" class="section pain-points">
-        <div class="container">
-            <h2 class="section-title reveal-text">Common Challenges</h2>
-            <div class="pain-points__grid">
-                <!-- Pain points will be populated here -->
-            </div>
-            <div class="pain-points__cta">
-                <a href="#services" class="btn btn--secondary">See How We Solve This</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Core Services Overview -->
-    <section id="services" class="section services">
-        <div class="container">
-            <h2 class="section-title reveal-text">Our Core Services</h2>
-            <div class="services__grid">
-                <!-- Service cards will be populated here -->
-            </div>
-            <div class="services__cta">
-                <a href="#process" class="btn btn--secondary">Explore Our Approach</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Case Studies Showcase -->
-    <!-- Case Studies Showcase -->
-<section id="case-studies" class="section case-studies">
+  <!-- Background Effect Container -->
+  <div id="background" class="digital-horizon-container"></div>
+  
+  <!-- 1. Header & Navigation -->
+  <header id="header" class="header">
     <div class="container">
-        <h2 class="section-title reveal-text">Client Success Stories</h2>
+      <div class="header__inner">
+        <a href="#" class="logo">
+          <img src="assets/img/mavikk-logo.svg" alt="Mavikk Digital Agency" width="120" height="40">
+        </a>
         
-        <!-- Featured Case Study with Before/After Slider -->
-        <div class="case-study-featured">
-            <div class="case-study-featured__header">
-                <h3 class="case-study-featured__title">TechCorp Website Redesign</h3>
-                <div class="case-study-featured__meta">
-                    <span class="case-study-featured__category">Website Redesign</span>
-                    <span class="case-study-featured__results">43% Conversion Increase</span>
-                </div>
-            </div>
-            
-            <!-- Metrics Highlight -->
-            <div class="case-study-featured__metrics">
-                <div class="case-study-featured__metric">
-                    <div class="case-study-featured__metric-value">43%</div>
-                    <div class="case-study-featured__metric-label">Conversion Increase</div>
-                </div>
-                <div class="case-study-featured__metric">
-                    <div class="case-study-featured__metric-value">67%</div>
-                    <div class="case-study-featured__metric-label">Time on Site</div>
-                </div>
-                <div class="case-study-featured__metric">
-                    <div class="case-study-featured__metric-value">52%</div>
-                    <div class="case-study-featured__metric-label">More Leads</div>
-                </div>
-            </div>
-            
-            <!-- Before/After Comparison -->
-            <div class="case-study-comparison">
-                <h4 class="case-study-comparison__title">Homepage Transformation</h4>
-                
-                <!-- Before/After Slider Component -->
-                <div class="before-after-slider" data-position="50" data-orientation="horizontal" data-before-label="Before" data-after-label="After">
-                    <div class="before-after-slider__before">
-                        <img src="/api/placeholder/1200/675" alt="TechCorp website before redesign">
-                    </div>
-                    <div class="before-after-slider__after">
-                        <img src="/api/placeholder/1200/675" alt="TechCorp website after redesign">
-                    </div>
-                </div>
-                
-                <div class="case-study-comparison__caption">
-                    Slide to compare the before and after versions of the TechCorp homepage
-                </div>
-            </div>
-            
-            <!-- Brief description -->
-            <p class="case-study-featured__description">
-                TechCorp approached us with an outdated website that failed to generate leads. Our strategy focused on clarifying their value proposition, streamlining the user journey, and optimizing for conversions.
-            </p>
-            
-            <!-- Client testimonial -->
-            <div class="case-study-featured__testimonial">
-                <div class="testimonial-card">
-                    <div class="testimonial-card__quote">
-                        "The website redesign completely transformed our digital presence and delivered measurable business results. Within the first month, we saw a 43% increase in qualified leads."
-                    </div>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__author-info">
-                            <div class="testimonial-card__author-name">Michael K.</div>
-                            <div class="testimonial-card__author-title">CEO, TechCorp Inc.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Other Case Studies -->
-        <div class="case-studies__grid">
-            <!-- Other case study cards will be populated here -->
-        </div>
-        
-        <div class="case-studies__cta">
-            <a href="#contact" class="btn btn--primary">Get Similar Results</a>
-        </div>
+        <nav class="nav">
+          <button class="nav-toggle" aria-label="Toggle Navigation">
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </button>
+          
+          <ul class="nav__menu">
+            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+            <li class="nav__item"><a href="#case-studies" class="nav__link">Case Studies</a></li>
+            <li class="nav__item"><a href="#process" class="nav__link">Process</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link nav__link--highlight">Get in Touch</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-</section>
+  </header>
 
-    <!-- Testimonials Section -->
-<section id="testimonials" class="section testimonials">
-    <div class="container">
-        <h2 class="section-title reveal-text">Client Testimonials</h2>
-        
-        <!-- Featured testimonial (optional) -->
-        <div class="testimonial--featured">
-            <div class="testimonial-card">
-                <div class="testimonial-card__quote">
-                    "Mavikk transformed our online presence completely. Our conversion rate increased by 43% within the first month after launch, and the ROI on our marketing spend has more than doubled."
-                </div>
-                <div class="testimonial-card__author">
-                    <div class="testimonial-card__author-image">
-                        <!-- Placeholder for author image -->
-                    </div>
-                    <div class="testimonial-card__author-info">
-                        <div class="testimonial-card__author-name">Jennifer R.</div>
-                        <div class="testimonial-card__author-title">CMO, TechCorp</div>
-                    </div>
-                </div>
-            </div>
+  <main>
+    <!-- 2. Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="headline headline--split reveal-text">
+            Digital Excellence <em>That Drives Results</em>
+          </h1>
+          <p class="lead-text reveal-text">
+            We create data-driven digital experiences that transform brands and grow businesses. Our results-focused approach has helped clients achieve an average of 37% growth.
+          </p>
+          <div class="hero__cta reveal-text">
+            <a href="#contact" class="btn btn--primary">Book a Strategy Call</a>
+            <span class="hero__cta-note">No-obligation 30-minute consultation</span>
+          </div>
         </div>
-        
-        <!-- Testimonials carousel -->
-        <div id="testimonial-carousel" class="testimonial-carousel">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card">
-                <div class="testimonial-card__quote">
-                    "The team at Mavikk doesn't just deliver beautiful designs - they build strategic assets that drive business results. Our new website has generated 52% more qualified leads with a 38% lower bounce rate."
-                </div>
-                <div class="testimonial-card__author">
-                    <div class="testimonial-card__author-image">
-                        <!-- Placeholder for author image -->
-                    </div>
-                    <div class="testimonial-card__author-info">
-                        <div class="testimonial-card__author-name">Michael K.</div>
-                        <div class="testimonial-card__author-title">CEO, InnovateCo</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Testimonial 2 -->
-            <div class="testimonial-card">
-                <div class="testimonial-card__quote">
-                    "Working with Mavikk has been a game-changer for our brand. Their strategic approach to design and marketing has helped us establish a premium market position and attract higher-value clients."
-                </div>
-                <div class="testimonial-card__author">
-                    <div class="testimonial-card__author-image">
-                        <!-- Placeholder for author image -->
-                    </div>
-                    <div class="testimonial-card__author-info">
-                        <div class="testimonial-card__author-name">Sarah T.</div>
-                        <div class="testimonial-card__author-title">Marketing Director, GlobalMedia</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Testimonial 3 with video -->
-            <div class="testimonial-video" data-video-url="https://www.youtube.com/embed/VIDEO_ID_HERE">
-                <img src="/api/placeholder/640/360" alt="Video testimonial thumbnail" class="testimonial-video__thumbnail">
-                <div class="testimonial-video__play">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 3L19 12L5 21V3Z" fill="currentColor"/>
-                    </svg>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card__quote">
-                        "After three unsuccessful attempts with other agencies, Mavikk delivered a website that actually converts. Our conversion rate increased from 1.2% to 4.7% in just two months."
-                    </div>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__author-info">
-                            <div class="testimonial-card__author-name">David L.</div>
-                            <div class="testimonial-card__author-title">Operations Manager, EcoSolutions</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Testimonial 4 -->
-            <div class="testimonial-card">
-                <div class="testimonial-card__quote">
-                    "The level of strategic thinking Mavikk brings to each project is impressive. They helped us clarify our messaging, refine our brand identity, and create a digital experience that resonates with our target audience."
-                </div>
-                <div class="testimonial-card__author">
-                    <div class="testimonial-card__author-image">
-                        <!-- Placeholder for author image -->
-                    </div>
-                    <div class="testimonial-card__author-info">
-                        <div class="testimonial-card__author-name">Alex W.</div>
-                        <div class="testimonial-card__author-title">Founder, FinanceHub</div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero__social-proof">
+          <p class="hero__social-proof-text">Trusted by industry leaders</p>
+          <div class="client-logos client-logos--small">
+            <!-- Client logos will be placed here -->
+          </div>
         </div>
-        
-        <!-- Metrics highlights -->
-        <div class="testimonial-metrics">
-            <div class="testimonial-metric">
-                <div class="testimonial-metric__value">37%</div>
-                <div class="testimonial-metric__label">Avg. Conversion Increase</div>
-            </div>
-            <div class="testimonial-metric">
-                <div class="testimonial-metric__value">52%</div>
-                <div class="testimonial-metric__label">More Qualified Leads</div>
-            </div>
-            <div class="testimonial-metric">
-                <div class="testimonial-metric__value">43%</div>
-                <div class="testimonial-metric__label">Higher Engagement</div>
-            </div>
-            <div class="testimonial-metric">
-                <div class="testimonial-metric__value">2.8x</div>
-                <div class="testimonial-metric__label">Average ROI</div>
-            </div>
-        </div>
-        
-        <!-- Client logos -->
-        <div class="testimonial-logos">
-            <!-- Client logos would go here - using text placeholders for now -->
-            <div class="testimonial-logo">TechCorp</div>
-            <div class="testimonial-logo">GlobalMedia</div>
-            <div class="testimonial-logo">InnovateCo</div>
-            <div class="testimonial-logo">EcoSolutions</div>
-            <div class="testimonial-logo">FinanceHub</div>
-        </div>
-    </div>
-</section>
-    
-    <!-- Contact/Consultation Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="contact__wrapper">
-                <div class="contact__content">
-                    <h2 class="section-title reveal-text">Start Your Project</h2>
-                    <p class="lead-text">
-                        Ready to transform your digital presence? Let's discuss how we can help you achieve your business goals.
-                    </p>
-                    <div class="contact__info">
-                        <div class="contact__info-item">
-                            <span class="contact__info-label">Email</span>
-                            <a href="mailto:hello@mavikk.com" class="contact__info-value">hello@mavikk.com</a>
-                        </div>
-                        <div class="contact__info-item">
-                            <span class="contact__info-label">Phone</span>
-                            <a href="tel:+12345678901" class="contact__info-value">+1 (234) 567-8901</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact__form-container">
-                    <form class="contact__form" id="contact-form">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company" class="form-label">Company</label>
-                            <input type="text" id="company" name="company" class="form-input">
-                        </div>
-                        <div class="form-group form-group--full">
-                            <label for="message" class="form-label">How can we help?</label>
-                            <textarea id="message" name="message" class="form-input form-textarea" required></textarea>
-                        </div>
-                        <div class="form-group form-group--full">
-                            <button type="submit" class="btn btn--primary btn--full">Book a Strategy Call</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
     
-    <!-- Footer -->
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="footer__wrapper">
-                <div class="footer__branding">
-                    <span class="logo__text logo__text--footer">Mavikk</span>
-                    <p class="footer__tagline">Digital Excellence That Drives Results</p>
-                </div>
-                <div class="footer__links">
-                    <div class="footer__links-column">
-                        <h3 class="footer__links-title">Services</h3>
-                        <ul class="footer__links-list">
-                            <li><a href="#" class="footer__link">Website Design</a></li>
-                            <li><a href="#" class="footer__link">Branding</a></li>
-                            <li><a href="#" class="footer__link">Digital Marketing</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__links-column">
-                        <h3 class="footer__links-title">Company</h3>
-                        <ul class="footer__links-list">
-                            <li><a href="#about" class="footer__link">About</a></li>
-                            <li><a href="#process" class="footer__link">Process</a></li>
-                            <li><a href="#contact" class="footer__link">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__links-column">
-                        <h3 class="footer__links-title">Legal</h3>
-                        <ul class="footer__links-list">
-                            <li><a href="#" class="footer__link">Privacy Policy</a></li>
-                            <li><a href="#" class="footer__link">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- 3. Pain Points -->
+    <section id="pain-points" class="pain-points">
+      <div class="container">
+        <h2 class="section-title reveal-text">Common Challenges</h2>
+        <h3 class="headline headline--split reveal-text">
+          Breakthrough <em>Your Digital Barriers</em>
+        </h3>
+        
+        <div class="pain-points__grid">
+          <div class="pain-point-card reveal-text">
+            <div class="pain-point-card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
             </div>
-            <div class="footer__bottom">
-                <p class="footer__copyright">&copy; 2025 Mavikk Digital Agency. All rights reserved.</p>
-                <div class="footer__social">
-                    <a href="#" class="footer__social-link" aria-label="Twitter">Twitter</a>
-                    <a href="#" class="footer__social-link" aria-label="LinkedIn">LinkedIn</a>
-                    <a href="#" class="footer__social-link" aria-label="Instagram">Instagram</a>
-                </div>
+            <h4 class="pain-point-card__title">Low Website Conversion</h4>
+            <p class="pain-point-card__description">
+              Beautiful websites that fail to convert visitors into customers are costing you revenue every day.
+            </p>
+            <div class="pain-point-card__severity">
+              <div class="severity-meter">
+                <div class="severity-meter__fill" style="width: 90%;"></div>
+              </div>
+              <span class="severity-meter__label">90% of businesses affected</span>
             </div>
+            <div class="pain-point-card__testimony">
+              <p>"We were losing 75% of potential leads before working with Mavikk."</p>
+              <cite>— Marketing Director, SaaS Company</cite>
+            </div>
+          </div>
+          
+          <div class="pain-point-card reveal-text">
+            <div class="pain-point-card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h4 class="pain-point-card__title">Inconsistent Brand Experience</h4>
+            <p class="pain-point-card__description">
+              Disconnected marketing channels and inconsistent messaging confuse customers and weaken your brand impact.
+            </p>
+            <div class="pain-point-card__severity">
+              <div class="severity-meter">
+                <div class="severity-meter__fill" style="width: 85%;"></div>
+              </div>
+              <span class="severity-meter__label">85% of businesses affected</span>
+            </div>
+            <div class="pain-point-card__testimony">
+              <p>"Our branding was all over the place before Mavikk unified our visual identity."</p>
+              <cite>— CEO, E-commerce Retailer</cite>
+            </div>
+          </div>
+          
+          <div class="pain-point-card reveal-text">
+            <div class="pain-point-card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="2" x2="12" y2="6"></line>
+                <line x1="12" y1="18" x2="12" y2="22"></line>
+                <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                <line x1="2" y1="12" x2="6" y2="12"></line>
+                <line x1="18" y1="12" x2="22" y2="12"></line>
+                <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+              </svg>
+            </div>
+            <h4 class="pain-point-card__title">Marketing Without ROI</h4>
+            <p class="pain-point-card__description">
+              Investing in marketing activities without clear metrics or measurable returns is draining your budget with unknown results.
+            </p>
+            <div class="pain-point-card__severity">
+              <div class="severity-meter">
+                <div class="severity-meter__fill" style="width: 95%;"></div>
+              </div>
+              <span class="severity-meter__label">95% of businesses affected</span>
+            </div>
+            <div class="pain-point-card__testimony">
+              <p>"We had no idea which campaigns were working until Mavikk implemented proper tracking."</p>
+              <cite>— CMO, Professional Services Firm</cite>
+            </div>
+          </div>
         </div>
-    </footer>
+        
+        <div class="pain-points__cta reveal-text">
+          <a href="#services" class="btn btn--secondary">See How We Solve This</a>
+        </div>
+      </div>
+    </section>
     
-    <!-- JavaScript imports -->
-    <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.3.2/dist/pixi.min.js"></script>
-    <script src="assets/js/horizon.js" type="module"></script>
-    <script src="assets/js/content.js" type="module"></script>
-    <script src="assets/js/main.js" type="module"></script>
+    <!-- 4. Core Services Overview -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title reveal-text">Our Services</h2>
+        <h3 class="headline headline--split reveal-text">
+          Strategic Solutions <em>For Digital Growth</em>
+        </h3>
+        <p class="lead-text reveal-text">
+          We combine creative excellence with data-driven insights to deliver measurable results across all your digital touchpoints.
+        </p>
+        
+        <div class="services__grid">
+          <div class="service-card reveal-text">
+            <div class="service-card__icon">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </div>
+            <h4 class="service-card__title">Website Design & Development</h4>
+            <p class="service-card__description">
+              Conversion-focused websites that turn visitors into customers through intuitive design and performance-optimized code.
+            </p>
+            <ul class="service-card__features">
+              <li>Custom WordPress & Headless CMS</li>
+              <li>E-commerce & SaaS Platforms</li>
+              <li>UX/UI Design & User Journey Optimization</li>
+              <li>Performance & Conversion Optimization</li>
+            </ul>
+            <div class="service-card__metric">
+              <span class="service-card__metric-value">37%</span>
+              <span class="service-card__metric-label">Average conversion improvement</span>
+            </div>
+            <a href="#web-design" class="service-card__link">
+              Learn More
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="service-card reveal-text">
+            <div class="service-card__icon">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h4 class="service-card__title">Branding & Graphics Design</h4>
+            <p class="service-card__description">
+              Strategic brand development that creates emotional connections with your audience and differentiates your business.
+            </p>
+            <ul class="service-card__features">
+              <li>Brand Identity & Logo Design</li>
+              <li>Marketing Collateral & Presentations</li>
+              <li>Visual Content Strategy</li>
+              <li>Brand Voice & Messaging</li>
+            </ul>
+            <div class="service-card__metric">
+              <span class="service-card__metric-value">82%</span>
+              <span class="service-card__metric-label">Brand recognition increase</span>
+            </div>
+            <a href="#branding" class="service-card__link">
+              Learn More
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="service-card reveal-text">
+            <div class="service-card__icon">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+                <path d="M5 5l14 14"></path>
+                <path d="M19 5L5 19"></path>
+              </svg>
+            </div>
+            <h4 class="service-card__title">Digital Marketing</h4>
+            <p class="service-card__description">
+              ROI-focused campaigns that attract qualified traffic, nurture leads, and maximize customer lifetime value.
+            </p>
+            <ul class="service-card__features">
+              <li>SEO & Content Marketing</li>
+              <li>Paid Search & Social Advertising</li>
+              <li>Email & Marketing Automation</li>
+              <li>Analytics & Performance Tracking</li>
+            </ul>
+            <div class="service-card__metric">
+              <span class="service-card__metric-value">248%</span>
+              <span class="service-card__metric-label">Average ROI on campaigns</span>
+            </div>
+            <a href="#marketing" class="service-card__link">
+              Learn More
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="services__cta reveal-text">
+          <a href="#process" class="btn btn--primary">Explore Our Approach</a>
+          <p class="services__cta-note">Proven process with measurable results</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 5. Website Design & Development -->
+    <section id="web-design" class="web-design">
+      <div class="container">
+        <div class="section-header reveal-text">
+          <h2 class="section-title">Website Design & Development</h2>
+          <h3 class="headline headline--split">
+            Websites That <em>Convert & Perform</em>
+          </h3>
+          <p class="lead-text">
+            We create stunning, high-performance websites that engage your visitors and drive measurable business results.
+          </p>
+        </div>
+        
+        <div class="web-design__showcase">
+          <div class="before-after reveal-text">
+            <div class="before-after__images">
+              <div class="before-after__image before-after__image--before">
+                <img src="assets/img/portfolio/website-before.jpg" alt="Website before redesign" width="600" height="400">
+                <span class="before-after__label before-after__label--before">Before</span>
+              </div>
+              <div class="before-after__image before-after__image--after">
+                <img src="assets/img/portfolio/website-after.jpg" alt="Website after redesign" width="600" height="400">
+                <span class="before-after__label before-after__label--after">After</span>
+              </div>
+            </div>
+            <div class="before-after__info">
+              <h4 class="before-after__title">Resonance Financial Advisors</h4>
+              <p class="before-after__description">
+                A complete redesign focused on client acquisition and trust-building, resulting in a 157% increase in consultation requests.
+              </p>
+              <div class="before-after__stats">
+                <div class="stat">
+                  <span class="stat__value">+89%</span>
+                  <span class="stat__label">Mobile Conversion</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__value">-42%</span>
+                  <span class="stat__label">Bounce Rate</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__value">+2.4x</span>
+                  <span class="stat__label">Page Views</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="web-design__process reveal-text">
+          <h4 class="web-design__process-title">Our Web Development Process</h4>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="process-step__number">01</div>
+              <h5 class="process-step__title">Discovery & Strategy</h5>
+              <p class="process-step__description">
+                We analyze your business goals, audience needs, and competitive landscape to create a strategic roadmap.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__number">02</div>
+              <h5 class="process-step__title">UX/UI Design</h5>
+              <p class="process-step__description">
+                We design intuitive user experiences and visually compelling interfaces that align with your brand.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__number">03</div>
+              <h5 class="process-step__title">Development</h5>
+              <p class="process-step__description">
+                Our developers build responsive, performance-optimized websites with clean, maintainable code.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__number">04</div>
+              <h5 class="process-step__title">Testing & Launch</h5>
+              <p class="process-step__description">
+                Rigorous testing across devices and browsers ensures your site works flawlessly everywhere.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="web-design__tech reveal-text">
+          <h4 class="web-design__tech-title">Our Technology Stack</h4>
+          <div class="tech-icons">
+            <div class="tech-icon">
+              <img src="assets/img/tech/wordpress.svg" alt="WordPress" width="60" height="60">
+              <span class="tech-icon__name">WordPress</span>
+            </div>
+            <div class="tech-icon">
+              <img src="assets/img/tech/react.svg" alt="React" width="60" height="60">
+              <span class="tech-icon__name">React</span>
+            </div>
+            <div class="tech-icon">
+              <img src="assets/img/tech/shopify.svg" alt="Shopify" width="60" height="60">
+              <span class="tech-icon__name">Shopify</span>
+            </div>
+            <div class="tech-icon">
+              <img src="assets/img/tech/gsap.svg" alt="GSAP" width="60" height="60">
+              <span class="tech-icon__name">GSAP</span>
+            </div>
+            <div class="tech-icon">
+              <img src="assets/img/tech/figma.svg" alt="Figma" width="60" height="60">
+              <span class="tech-icon__name">Figma</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="web-design__testimonial reveal-text">
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">
+              "Mavikk completely transformed our online presence. The new website not only looks stunning but has significantly increased our lead generation and conversion rates."
+            </p>
+            <footer class="testimonial__footer">
+              <img src="assets/img/testimonials/client-1.jpg" alt="Sarah Johnson" class="testimonial__image" width="60" height="60">
+              <div class="testimonial__author">
+                <strong>Sarah Johnson</strong>
+                <span>Director of Marketing, Resonance Financial</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+        
+        <div class="web-design__cta reveal-text">
+          <a href="#contact" class="btn btn--primary">Discuss Your Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Branding & Graphics Design -->
+    <section id="branding" class="branding">
+      <div class="container">
+        <div class="section-header reveal-text">
+          <h2 class="section-title">Branding & Graphics Design</h2>
+          <h3 class="headline headline--split">
+            Strategic Visuals <em>That Define Your Brand</em>
+          </h3>
+          <p class="lead-text">
+            We create memorable brand identities and visual systems that resonate with your audience and differentiate your business in the market.
+          </p>
+        </div>
+        
+        <div class="branding__showcase">
+          <div class="brand-transformation reveal-text">
+            <div class="brand-transformation__header">
+              <h4 class="brand-transformation__title">Novus Health - Brand Transformation</h4>
+              <p class="brand-transformation__description">
+                A complete rebrand that transformed a traditional healthcare provider into a modern wellness platform, increasing market share by 42%.
+              </p>
+            </div>
+            
+            <div class="brand-transformation__visuals">
+              <div class="brand-transformation__logo">
+                <div class="logo-comparison">
+                  <div class="logo-comparison__item">
+                    <span class="logo-comparison__label">Before</span>
+                    <img src="assets/img/branding/logo-before.svg" alt="Novus Health old logo" width="200" height="80" class="logo-comparison__image">
+                  </div>
+                  <div class="logo-comparison__item">
+                    <span class="logo-comparison__label">After</span>
+                    <img src="assets/img/branding/logo-after.svg" alt="Novus Health new logo" width="200" height="80" class="logo-comparison__image">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="brand-transformation__colors">
+                <span class="brand-transformation__subtitle">Color System</span>
+                <div class="color-palette">
+                  <div class="color-swatch" style="background-color: #0E7AD3;">
+                    <span class="color-swatch__hex">#0E7AD3</span>
+                  </div>
+                  <div class="color-swatch" style="background-color: #1BD0C8;">
+                    <span class="color-swatch__hex">#1BD0C8</span>
+                  </div>
+                  <div class="color-swatch" style="background-color: #F5F9FF;">
+                    <span class="color-swatch__hex">#F5F9FF</span>
+                  </div>
+                  <div class="color-swatch" style="background-color: #111E3A;">
+                    <span class="color-swatch__hex">#111E3A</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="brand-transformation__collateral">
+                <span class="brand-transformation__subtitle">Brand Collateral</span>
+                <div class="collateral-grid">
+                  <img src="assets/img/branding/collateral-1.jpg" alt="Business cards" class="collateral-grid__item" width="120" height="90">
+                  <img src="assets/img/branding/collateral-2.jpg" alt="Brochure design" class="collateral-grid__item" width="120" height="90">
+                  <img src="assets/img/branding/collateral-3.jpg" alt="Social media templates" class="collateral-grid__item" width="120" height="90">
+                  <img src="assets/img/branding/collateral-4.jpg" alt="Email templates" class="collateral-grid__item" width="120" height="90">
+                </div>
+              </div>
+            </div>
+            
+            <div class="brand-transformation__results">
+              <div class="result-box">
+                <span class="result-box__value">94%</span>
+                <span class="result-box__label">Brand recall increase</span>
+              </div>
+              <div class="result-box">
+                <span class="result-box__value">3.2x</span>
+                <span class="result-box__label">Social engagement</span>
+              </div>
+              <div class="result-box">
+                <span class="result-box__value">68%</span>
+                <span class="result-box__label">Perceived value increase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="branding__philosophy reveal-text">
+          <h4 class="branding__philosophy-title">Our Brand Design Philosophy</h4>
+          <div class="philosophy-grid">
+            <div class="philosophy-item">
+              <div class="philosophy-item__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h5 class="philosophy-item__title">Strategic Foundation</h5>
+              <p class="philosophy-item__description">
+                Every visual element is based on strategic insights about your audience, market position, and business goals.
+              </p>
+            </div>
+            <div class="philosophy-item">
+              <div class="philosophy-item__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+              <h5 class="philosophy-item__title">Emotional Connection</h5>
+              <p class="philosophy-item__description">
+                We design visuals that evoke the right emotions and create meaningful connections with your target audience.
+              </p>
+            </div>
+            <div class="philosophy-item">
+              <div class="philosophy-item__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="21" y2="12"></line>
+                  <line x1="8" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+              </div>
+              <h5 class="philosophy-item__title">Systematic Approach</h5>
+              <p class="philosophy-item__description">
+                We create comprehensive visual systems that maintain consistency across all brand touchpoints.
+              </p>
+            </div>
+            <div class="philosophy-item">
+              <div class="philosophy-item__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <h5 class="philosophy-item__title">Future-Proof Flexibility</h5>
+              <p class="philosophy-item__description">
+                Our brand systems adapt and evolve as your business grows, with frameworks that flex for new applications.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="branding__testimonial reveal-text">
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">
+              "The rebrand completely transformed how our customers perceive us. We went from being seen as just another healthcare provider to becoming a leading wellness innovator in our market."
+            </p>
+            <footer class="testimonial__footer">
+              <img src="assets/img/testimonials/client-2.jpg" alt="Michael Chen" class="testimonial__image" width="60" height="60">
+              <div class="testimonial__author">
+                <strong>Michael Chen</strong>
+                <span>Chief Marketing Officer, Novus Health</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+        
+        <div class="branding__cta reveal-text">
+          <a href="#contact" class="btn btn--primary">Transform Your Brand</a>
+        </div>
+      </div>
+    </section>
+    <!-- 7. Digital Marketing -->
+    <!-- 8. Case Studies Showcase -->
+    <!-- 9. Process & Methodology -->
+    <!-- 10. Team/About Section -->
+    <!-- 11. Tools & Technologies -->
+    <!-- 12. Results & Metrics -->
+    <!-- 13. Testimonials Carousel -->
+    <!-- 14. FAQ Section -->
+    <!-- 15. Blog/Resource Preview -->
+    <!-- 16. Client Logos Showcase -->
+    <!-- 17. Awards & Recognition -->
+    <!-- 18. Contact/Consultation Section -->
+    <!-- 19. Call-to-Action Section -->
+  </main>
+  
+  <!-- 20. Footer -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="logo">
+            <img src="assets/img/mavikk-logo-white.svg" alt="Mavikk Digital Agency" width="120" height="40">
+          </a>
+          <p class="footer__tagline">Digital Excellence That Drives Results</p>
+          <div class="footer__social">
+            <!-- Social icons will be placed here -->
+          </div>
+        </div>
+        
+        <div class="footer__links">
+          <!-- Site map links will be placed here -->
+        </div>
+        
+        <div class="footer__contact">
+          <!-- Contact details will be placed here -->
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Mavikk Digital Agency. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#privacy" class="footer__legal-link">Privacy Policy</a>
+          <a href="#terms" class="footer__legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PixiJS from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.3.2/dist/pixi.min.js"></script>
+  
+  <!-- Main JavaScript -->
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
