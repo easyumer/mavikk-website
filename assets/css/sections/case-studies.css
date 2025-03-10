@@ -1,0 +1,266 @@
+/* 
+ * FILE: assets/css/sections/case-studies.css
+ * VERSION: v0.01.0
+ * DESCRIPTION: Case studies section styles for the Mavikk website
+ */
+
+/* Case studies section container */
+.case-studies {
+    position: relative;
+    background-color: var(--color-black);
+  }
+  
+  /* Section title with centered alignment */
+  .case-studies .section-title {
+    text-align: center;
+    margin-bottom: var(--space-8);
+  }
+  
+  /* Case studies grid layout */
+  .case-studies__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+  }
+  
+  @media (min-width: 768px) {
+    .case-studies__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-8);
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .case-studies__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Featured case study - spans full width */
+  .case-study-card--featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 5px 30px rgba(138, 92, 247, 0.1);
+  }
+  
+  @media (min-width: 1024px) {
+    .case-study-card--featured {
+      grid-template-columns: 1.5fr 1fr;
+    }
+  
+    .case-study-card--featured .case-study-card__image-container {
+      height: 100%;
+      padding-bottom: 0;
+    }
+  }
+  
+  /* Case study cards animation */
+  .case-studies .case-study-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow var(--transition-normal), border-color var(--transition-normal);
+  }
+  
+  .case-studies .case-study-card.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Sequential animation delay for cards */
+  .case-studies .case-study-card:nth-child(1) { transition-delay: 0.1s; }
+  .case-studies .case-study-card:nth-child(2) { transition-delay: 0.2s; }
+  .case-studies .case-study-card:nth-child(3) { transition-delay: 0.3s; }
+  
+  /* Before and after comparison */
+  .case-study-card__comparison {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: var(--space-4);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+  }
+  
+  .case-study-card__before,
+  .case-study-card__after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .case-study-card__after {
+    width: 50%;
+    border-right: 2px solid var(--color-accent);
+  }
+  
+  .case-study-card__comparison-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    left: 50%;
+    background-color: var(--color-accent);
+    cursor: ew-resize;
+    transform: translateX(-50%);
+  }
+  
+  .case-study-card__comparison-slider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .case-study-card__comparison-slider::after {
+    content: "↔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    font-size: var(--fs-xs);
+  }
+  
+  .case-study-card__comparison-label {
+    position: absolute;
+    padding: var(--space-1) var(--space-3);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--color-white);
+    font-size: var(--fs-xs);
+    border-radius: var(--border-radius-full);
+  }
+  
+  .case-study-card__comparison-label--before {
+    top: var(--space-3);
+    right: var(--space-3);
+  }
+  
+  .case-study-card__comparison-label--after {
+    top: var(--space-3);
+    left: var(--space-3);
+  }
+  
+  /* Results metrics with visual indicators */
+  .case-study-card__results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-5);
+    padding-top: var(--space-5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .case-study-card__result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .case-study-card__result-value {
+    font-size: var(--fs-2xl);
+    font-weight: var(--font-bold);
+    color: var(--color-accent);
+    margin-bottom: var(--space-1);
+    position: relative;
+  }
+  
+  .case-study-card__result-value::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-accent);
+    margin-top: var(--space-1);
+    border-radius: var(--border-radius-full);
+  }
+  
+  .case-study-card__result-label {
+    font-size: var(--fs-sm);
+    color: var(--color-gray-300);
+  }
+  
+  /* CTA section at the bottom */
+  .case-studies__cta {
+    text-align: center;
+    margin-top: var(--space-8);
+  }
+  
+  /* View case study button */
+  .case-study-card__view-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(138, 92, 247, 0.1);
+    border: 1px solid var(--color-accent);
+    color: var(--color-white);
+    font-size: var(--fs-sm);
+    font-weight: var(--font-medium);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--border-radius-full);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    margin-top: var(--space-4);
+  }
+  
+  .case-study-card__view-btn:hover {
+    background-color: var(--color-accent);
+  }
+  
+  .case-study-card__view-btn svg {
+    margin-left: var(--space-2);
+  }
+  
+  /* Industry badges */
+  .case-study-card__industry {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    color: var(--color-gray-300);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--border-radius-full);
+    margin-bottom: var(--space-3);
+  }
+  
+  /* Testimonial within case study card */
+  .case-study-card__testimonial {
+    margin-top: var(--space-4);
+    padding: var(--space-4);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius-md);
+    font-style: italic;
+    color: var(--color-gray-300);
+    position: relative;
+  }
+  
+  .case-study-card__testimonial::before {
+    content: """;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    font-size: 3rem;
+    color: var(--color-accent);
+    opacity: 0.3;
+  }
+  
+  .case-study-card__testimonial-author {
+    display: block;
+    margin-top: var(--space-2);
+    text-align: right;
+    font-style: normal;
+    color: var(--color-white);
+  }
