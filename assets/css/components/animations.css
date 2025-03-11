@@ -1,0 +1,275 @@
+/**
+ * Animation Styles
+ * Mavikk Digital Agency
+ */
+
+/* Base reveal animation */
+.reveal-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .reveal-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Reveal animations with different directions */
+  .reveal-element--left {
+    transform: translateX(-20px);
+  }
+  
+  .reveal-element--left.revealed {
+    transform: translateX(0);
+  }
+  
+  .reveal-element--right {
+    transform: translateX(20px);
+  }
+  
+  .reveal-element--right.revealed {
+    transform: translateX(0);
+  }
+  
+  .reveal-element--up {
+    transform: translateY(20px);
+  }
+  
+  .reveal-element--up.revealed {
+    transform: translateY(0);
+  }
+  
+  .reveal-element--down {
+    transform: translateY(-20px);
+  }
+  
+  .reveal-element--down.revealed {
+    transform: translateY(0);
+  }
+  
+  /* Reveal animations with scale */
+  .reveal-element--scale {
+    transform: scale(0.95);
+  }
+  
+  .reveal-element--scale.revealed {
+    transform: scale(1);
+  }
+  
+  /* Reveal with fade only */
+  .reveal-element--fade {
+    transform: none;
+  }
+  
+  /* Floating animation for hero image */
+  .floating-animation {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* Subtle pulse animation for CTA buttons */
+  .pulse-animation {
+    animation: pulse 5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 4px 20px rgba(138, 92, 247, 0.3);
+    }
+    50% {
+      box-shadow: 0 4px 30px rgba(138, 92, 247, 0.5);
+    }
+    100% {
+      box-shadow: 0 4px 20px rgba(138, 92, 247, 0.3);
+    }
+  }
+  
+  /* Service card hover effect */
+  .service-card--hover {
+    box-shadow: 0 20px 30px rgba(138, 92, 247, 0.2);
+  }
+  
+  /* Mobile menu item animations */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Error shake animation */
+  .shake-animation {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    20%, 60% {
+      transform: translateX(-5px);
+    }
+    40%, 80% {
+      transform: translateX(5px);
+    }
+  }
+  
+  /* Scroll progress indicator */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    z-index: var(--z-sticky);
+    width: 0%;
+    transition: width 0.1s;
+  }
+  
+  /* Parallax element base style */
+  .parallax-element {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+  }
+  
+  .parallax-ready {
+    transition: transform 0.1s ease-out;
+  }
+  
+  /* Background blur in when content is in focus */
+  .section--focus-blur {
+    transition: backdrop-filter 0.5s ease;
+  }
+  
+  .section--focus-blur.in-focus {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  /* Morphing background shapes */
+  .bg-morph {
+    animation: morphBackground 15s ease-in-out infinite alternate;
+    transition: opacity 0.5s ease;
+  }
+  
+  @keyframes morphBackground {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
+  
+  /* Smooth transitions for hover states */
+  .btn,
+  .card,
+  .service-card,
+  .testimonial,
+  .nav-link,
+  .form-input,
+  .client-logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  /* Loading spinner animation */
+  .loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Subtle hover lift effect */
+  .hover-lift {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-element,
+    .reveal-element--left,
+    .reveal-element--right,
+    .reveal-element--up,
+    .reveal-element--down,
+    .reveal-element--scale,
+    .reveal-element--fade {
+      transition: none;
+      opacity: 1;
+      transform: none;
+    }
+    
+    .floating-animation,
+    .pulse-animation,
+    .animate-fade-in,
+    .bg-morph {
+      animation: none;
+    }
+    
+    .parallax-element,
+    .parallax-ready {
+      transition: none;
+      transform: none !important;
+    }
+    
+    .section--focus-blur {
+      transition: none;
+    }
+    
+    .hover-lift:hover {
+      transform: none;
+    }
+    
+    .btn,
+    .card,
+    .service-card,
+    .testimonial,
+    .nav-link,
+    .form-input,
+    .client-logo {
+      transition: none;
+    }
+  }
+  
+  /* Class to force disable animations */
+  .reduced-motion * {
+    transition: none !important;
+    animation: none !important;
+  }

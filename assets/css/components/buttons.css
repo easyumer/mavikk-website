@@ -1,0 +1,200 @@
+/**
+ * Button Components
+ * Mavikk Digital Agency
+ */
+
+/* Base button styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-family: var(--font-primary);
+    font-weight: var(--font-medium);
+    font-size: var(--fs-base);
+    line-height: 1.4;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    border: 1px solid transparent;
+    gap: 0.5rem;
+    min-height: 48px;
+    user-select: none;
+  }
+  
+  /* Primary button */
+  .btn--primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-button);
+  }
+  
+  .btn--primary:hover, 
+  .btn--primary:focus {
+    text-decoration: none;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-button-hover);
+  }
+  
+  .btn--primary:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-button);
+  }
+  
+  /* Secondary button */
+  .btn--secondary {
+    background: rgba(138, 92, 247, 0.1);
+    color: var(--color-primary);
+    border: 1px solid rgba(138, 92, 247, 0.3);
+  }
+  
+  .btn--secondary:hover,
+  .btn--secondary:focus {
+    text-decoration: none;
+    color: var(--color-primary);
+    background: rgba(138, 92, 247, 0.15);
+    border-color: var(--color-primary);
+  }
+  
+  .btn--secondary:active {
+    transform: translateY(1px);
+  }
+  
+  /* Text button */
+  .btn--text {
+    background: transparent;
+    color: var(--color-primary);
+    padding: 0.5rem 0.75rem;
+    min-height: auto;
+  }
+  
+  .btn--text:hover,
+  .btn--text:focus {
+    text-decoration: none;
+    color: var(--color-primary-light);
+    background: rgba(138, 92, 247, 0.05);
+  }
+  
+  .btn--text:active {
+    transform: translateY(1px);
+  }
+  
+  /* Outline button */
+  .btn--outline {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  
+  .btn--outline:hover,
+  .btn--outline:focus {
+    text-decoration: none;
+    color: white;
+    border-color: white;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .btn--outline:active {
+    transform: translateY(1px);
+  }
+  
+  /* Button sizes */
+  .btn--large {
+    padding: 1rem 2rem;
+    font-size: var(--fs-lg);
+    min-height: 56px;
+  }
+  
+  .btn--small {
+    padding: 0.5rem 1rem;
+    font-size: var(--fs-sm);
+    min-height: 36px;
+  }
+  
+  /* Full width button */
+  .btn--block {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Button with icon */
+  .btn__icon {
+    width: 1.25em;
+    height: 1.25em;
+    flex-shrink: 0;
+  }
+  
+  .btn--icon-only {
+    padding: 0.5rem;
+    min-height: 0;
+  }
+  
+  .btn--icon-only .btn__icon {
+    margin: 0;
+  }
+  
+  /* Button states */
+  .btn--loading {
+    position: relative;
+    pointer-events: none;
+    color: transparent;
+  }
+  
+  .btn--loading::after {
+    content: '';
+    position: absolute;
+    width: 1.25em;
+    height: 1.25em;
+    top: calc(50% - 0.625em);
+    left: calc(50% - 0.625em);
+    border: 2px solid currentColor;
+    border-color: transparent transparent currentColor currentColor;
+    border-radius: 50%;
+    animation: button-loading-spinner 0.6s linear infinite;
+  }
+  
+  .btn--disabled,
+  .btn:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  @keyframes button-loading-spinner {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
+  /* Button group */
+  .btn-group {
+    display: inline-flex;
+    gap: var(--space-3);
+  }
+  
+  .btn-group--vertical {
+    flex-direction: column;
+  }
+  
+  /* Dark mode specific adjustments */
+  @media (prefers-color-scheme: dark) {
+    .btn--primary {
+      box-shadow: 0 4px 20px rgba(138, 92, 247, 0.3);
+    }
+    
+    .btn--primary:hover {
+      box-shadow: 0 6px 24px rgba(138, 92, 247, 0.4);
+    }
+  }
+  
+  /* Focus visible styles (maintain accessibility) */
+  .btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }

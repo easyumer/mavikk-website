@@ -1,0 +1,276 @@
+/**
+ * Footer Component
+ * Mavikk Digital Agency
+ */
+
+/* Site footer container */
+.site-footer {
+    background-color: rgba(8, 8, 12, 0.8);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    padding: var(--space-16) 0 var(--space-8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Footer main section with columns */
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+    margin-bottom: var(--space-12);
+  }
+  
+  @media (min-width: 640px) {
+    .footer-main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .footer-main {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+  }
+  
+  /* Footer brand column */
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-brand__logo {
+    height: 28px;
+    width: auto;
+    margin-bottom: var(--space-4);
+  }
+  
+  .footer-brand__tagline {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-6);
+  }
+  
+  /* Footer nav columns */
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-nav__title {
+    font-size: var(--fs-base);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+  }
+  
+  .footer-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .footer-nav__link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  
+  .footer-nav__link:hover,
+  .footer-nav__link:focus {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  
+  /* Footer social links */
+  .footer-social {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+  
+  .footer-social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    transition: all var(--transition-fast);
+  }
+  
+  .footer-social__link:hover,
+  .footer-social__link:focus {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .footer-social__icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Footer contact information */
+  .footer-contact__item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    color: var(--color-text-secondary);
+  }
+  
+  .footer-contact__icon {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+  
+  /* Footer bottom section with legal info */
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: var(--space-8);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  @media (min-width: 768px) {
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  
+  .footer-bottom__copyright {
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-4);
+  }
+  
+  @media (min-width: 768px) {
+    .footer-bottom__copyright {
+      margin-bottom: 0;
+    }
+  }
+  
+  /* Footer legal links */
+  .footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+  }
+  
+  .footer-legal__link {
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  
+  .footer-legal__link:hover,
+  .footer-legal__link:focus {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  
+  /* Newsletter signup in footer */
+  .footer-newsletter {
+    margin-top: var(--space-4);
+  }
+  
+  .footer-newsletter__title {
+    font-size: var(--fs-base);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+  }
+  
+  .footer-newsletter__text {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-4);
+    font-size: var(--fs-sm);
+  }
+  
+  .footer-newsletter__form {
+    display: flex;
+    gap: var(--space-2);
+  }
+  
+  .footer-newsletter__input {
+    flex-grow: 1;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    color: var(--color-text);
+    font-size: var(--fs-sm);
+    min-height: 42px;
+  }
+  
+  .footer-newsletter__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+  
+  .footer-newsletter__button {
+    padding: 0.5rem 1rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    min-height: 42px;
+  }
+  
+  .footer-newsletter__button:hover,
+  .footer-newsletter__button:focus {
+    background: var(--color-primary-dark);
+  }
+  
+  /* Back to top button */
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all var(--transition-normal);
+    z-index: var(--z-float);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back-to-top.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .back-to-top:hover,
+  .back-to-top:focus {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .back-to-top__icon {
+    width: 20px;
+    height: 20px;
+  }

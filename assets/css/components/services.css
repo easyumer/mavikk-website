@@ -1,0 +1,259 @@
+/**
+ * Services Section Styles
+ * Mavikk Digital Agency
+ */
+
+/* Services grid layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    margin: var(--space-12) 0;
+  }
+  
+  @media (min-width: 640px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Service card styles */
+  .service-card {
+    background-color: var(--color-surface);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    transition: transform var(--transition-normal),
+                box-shadow var(--transition-normal);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-hover);
+  }
+  
+  /* Service card icon */
+  .service-card__icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    background: rgba(138, 92, 247, 0.1);
+    margin-bottom: var(--space-4);
+    transition: transform var(--transition-normal);
+  }
+  
+  .service-card:hover .service-card__icon-container {
+    transform: scale(1.1);
+  }
+  
+  .service-card__icon {
+    width: 30px;
+    height: 30px;
+    color: var(--color-primary);
+  }
+  
+  /* Service card title */
+  .service-card__title {
+    margin-bottom: var(--space-3);
+    font-size: var(--fs-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-text);
+  }
+  
+  /* Service card description */
+  .service-card__description {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-5);
+    font-size: var(--fs-base);
+  }
+  
+  /* Service features list */
+  .service-card__features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-bottom: var(--space-5);
+  }
+  
+  /* Individual feature item */
+  .service-feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+  }
+  
+  .service-feature__icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: var(--color-success);
+  }
+  
+  /* Service results */
+  .service-card__result {
+    margin-top: auto;
+    padding: var(--space-4) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--space-4);
+  }
+  
+  .service-card__result-label {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-1);
+  }
+  
+  .service-card__result-value {
+    font-size: var(--fs-lg);
+    font-weight: var(--font-bold);
+    color: var(--color-primary);
+  }
+  
+  /* Service card footer */
+  .service-card__footer {
+    margin-top: auto;
+  }
+  
+  /* Service card with accent top border */
+  .service-card--accent-top {
+    border-top: 3px solid var(--color-primary);
+  }
+  
+  /* Featured service card */
+  .service-card--featured {
+    background: rgba(22, 22, 30, 0.9);
+    box-shadow: var(--shadow-card);
+    border-color: rgba(138, 92, 247, 0.3);
+  }
+  
+  /* Service card with badge */
+  .service-card__badge {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    background: var(--color-primary);
+    color: white;
+    font-size: var(--fs-xs);
+    font-weight: var(--font-medium);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-full);
+    z-index: 1;
+  }
+  
+  /* Animations for service cards */
+  .service-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .service-card.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Staggered reveal animations */
+  .service-card:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  .service-card:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+  
+  /* Service showcase layout with media */
+  .service-showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    margin: var(--space-16) 0;
+  }
+  
+  @media (min-width: 768px) {
+    .service-showcase {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+  
+  /* Service showcase media */
+  .service-showcase__media {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .service-showcase__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Process steps */
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    margin: var(--space-12) 0;
+  }
+  
+  /* Individual process step */
+  .process-step {
+    display: flex;
+    gap: var(--space-4);
+  }
+  
+  .process-step__number {
+    width: 36px;
+    height: 36px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-bold);
+    flex-shrink: 0;
+  }
+  
+  .process-step__content {
+    flex: 1;
+  }
+  
+  .process-step__title {
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-2);
+    color: var(--color-text);
+  }
+  
+  .process-step__description {
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+  }
+  
+  /* Reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .service-card {
+      opacity: 1;
+      transform: translateY(0);
+      transition: none;
+    }
+  }
